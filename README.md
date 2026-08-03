@@ -33,6 +33,17 @@ That replay found three port bugs the corpus fuzzer structurally could not see �
 including the biggest one, a wrong default timezone. See
 [CONFORMANCE.md](CONFORMANCE.md).
 
+## Demo
+
+**[▶ 5-minute demo video](demo/port-mortem-cron-parser.mp4)** (2:15, with audio) —
+plays inline on GitHub. Shows, live: the original 302-test suite passing
+unmodified, the SHA-256 manifest, the conformance replay at 130/130, the port's
+own tests, and 60 seconds of differential fuzzing.
+
+Reproduce the same run yourself with `node demo/demo.mjs` — the demo driver runs
+only commands documented in this README, so nothing in the video is
+demo-only.
+
 ## Why this repo
 
 POSIX cron predates the tz database and says **nothing** about daylight saving
