@@ -155,6 +155,60 @@ Cut in this order:
 Do **not** cut section 3 or section 6. Those are the two things no other
 submission will have.
 
+---
+
+# Option B: render the video automatically with `vhs`
+
+`asciinema` is not a fit here: it produces a `.cast` (JSON timing data that needs
+a player), not a video, and it has no native Windows support. `vhs` renders MP4
+directly and works on Windows.
+
+**The real advantage is reproducibility.** A live take is one performance; a tape
+regenerates the identical video after any change. No retakes, no typos, no mouse
+in frame.
+
+## Install (Windows)
+
+```bash
+winget install ffmpeg                              # required by vhs
+scoop install ttyd                                 # required by vhs
+go install github.com/charmbracelet/vhs@latest     # Go 1.26 already present
+```
+
+If `scoop` is absent, grab a `ttyd` release binary and put it on PATH.
+
+## Render
+
+```bash
+vhs demo/demo.tape
+# -> demo/port-mortem-demo.mp4
+# -> demo/port-mortem-demo.gif
+```
+
+Takes about 2.5 minutes of wall clock (the tape includes a live 60-second fuzz
+run). Every command in the tape was verified to work verbatim, including that
+each `tail -N` window captures the full summary block.
+
+## Voice-over
+
+The tape has **no audio**. Two ways to finish:
+
+1. **Record voice over the MP4** in any editor, using the narration above. The
+   tape's `Sleep` durations are sized to match the script's per-segment timings.
+2. **Ship it silent** — the tape already displays `demo/title.txt`,
+   `demo/finding.txt` and `demo/closing.txt`, which carry the explanation on
+   screen. Less engaging, but fully hands-off.
+
+Option 1 scores better; judges respond to a human explaining the `fixOffset`
+finding. Option 2 is the safe fallback if time runs short.
+
+## If `vhs` will not install
+
+Fall back to Option A above: screen-record yourself running
+`node demo/demo.mjs`. Same content, same order, just a live take.
+
+---
+
 ## Recording tips
 
 - The fuzz segment scrolls. Let it — the movement reads as "genuinely running"
