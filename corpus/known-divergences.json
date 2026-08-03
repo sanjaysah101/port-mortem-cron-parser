@@ -1,0 +1,21 @@
+{
+  "description": "Cases where the port deliberately does NOT match upstream, because upstream is wrong. Each entry must state the upstream defect and why reproducing it was rejected. The fuzzer counts these separately from unexplained divergences.",
+  "divergences": [
+    {
+      "id": "upstream-prev-loop-limit-dst-gap",
+      "predicate": {
+        "signature": "upstream throws loop-limit; port returns results",
+        "note": "Backward iteration across a spring-forward gap in zones with irregular transition widths or offsets. Confirmed in Pacific/Chatham (2026-09-27, +12:45 base) and Australia/Lord_Howe (2026-10-04, 30-minute shift). Expression-dependent: '0 0 0 * * *' succeeds in Lord Howe but '18 * 1,29 4/6 1/8' throws."
+      },
+      "upstream_behavior": "throws: Invalid expression, loop limit exceeded",
+      "port_behavior": "returns the correct previous occurrence",
+      "minimal_repro": "CronExpressionParser.parse('0 0 0 * * *', {tz:'Pacific/Chatham', currentDate:'2026-09-27T05:45:00'}).prev()",
+      "second_repro": "CronExpressionParser.parse('18 * 1,29 4/6 1/8', {tz:'Australia/Lord_Howe', currentDate:'2026-10-04T03:15:00'}).prev()",
+      "evidence": "Upstream returns 2026-09-26T12:10:00Z for the same expression when started from 01:00 instead of 05:45, so the correct values are not in dispute; the failure is in reverse hour-stepping across the DST gap.",
+      "scope": "Requires a :45-offset zone AND its spring-forward day AND a target hour before the gap. Hours 0 and 1 throw; 22 and '11,22' do not. Works on Chatham's other days, its fall-back day, and in UTC / America/New_York.",
+      "why_not_reproduced": "Propagating a loop-limit hang into the port is not fidelity worth having, and the correct answers are known. Recorded in DECISIONS.md D11.",
+      "found_by": "differential fuzzer, round 63, seed 1909638832",
+      "regression_test": "port/cronparser/chatham_test.go"
+    }
+  ]
+}

@@ -1,0 +1,1579 @@
+{
+  "schema": "cron-conformance-trace/v1",
+  "description": "Recorded from the UNMODIFIED upstream Jest suite. Every (expression, options) pair below is a literal call site read out of upstream/tests/*.test.ts; the recorded outcome is what the ORIGINAL TypeScript implementation returned. The test files are read as text and never edited — `run.mjs baseline` runs them unmodified (302/302) to prove that.",
+  "recordedUnderTZ": "UTC",
+  "maxIterationsPerCall": 8,
+  "extractedFrom": [
+    "CronDate.test.ts",
+    "CronExpression.test.ts",
+    "CronExpressionParser.test.ts",
+    "CronField.test.ts",
+    "CronFieldCollection.test.ts",
+    "CronFileParser.test.ts",
+    "random.test.ts"
+  ],
+  "callSitesRecorded": 130,
+  "callSitesUnusable": 0,
+  "callSitesAnchored": 21,
+  "records": [
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * *",
+      "options": {
+        "currentDate": "2020-03-06T10:02:01.002Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1583488980000,
+        1583489040000,
+        1583489100000,
+        1583489160000,
+        1583489220000,
+        1583489280000,
+        1583489340000,
+        1583489400000
+      ],
+      "prevFires": [
+        1583488920000,
+        1583488860000,
+        1583488800000,
+        1583488740000,
+        1583488680000,
+        1583488620000,
+        1583488560000,
+        1583488500000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "10,20 * * * * *",
+      "options": {
+        "currentDate": "2023-01-01T00:00:12.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672531220000,
+        1672531270000,
+        1672531280000,
+        1672531330000,
+        1672531340000,
+        1672531390000,
+        1672531400000,
+        1672531450000
+      ],
+      "prevFires": [
+        1672531210000,
+        1672531160000,
+        1672531150000,
+        1672531100000,
+        1672531090000,
+        1672531040000,
+        1672531030000,
+        1672530980000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "10,20 * * * * *",
+      "options": {
+        "currentDate": "2023-01-01T00:00:18.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672531220000,
+        1672531270000,
+        1672531280000,
+        1672531330000,
+        1672531340000,
+        1672531390000,
+        1672531400000,
+        1672531450000
+      ],
+      "prevFires": [
+        1672531210000,
+        1672531160000,
+        1672531150000,
+        1672531100000,
+        1672531090000,
+        1672531040000,
+        1672531030000,
+        1672530980000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 10,20 * * * *",
+      "options": {
+        "currentDate": "2023-01-01T00:12:30.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672532400000,
+        1672535400000,
+        1672536000000,
+        1672539000000,
+        1672539600000,
+        1672542600000,
+        1672543200000,
+        1672546200000
+      ],
+      "prevFires": [
+        1672531800000,
+        1672528800000,
+        1672528200000,
+        1672525200000,
+        1672524600000,
+        1672521600000,
+        1672521000000,
+        1672518000000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 10 * * * *",
+      "options": {
+        "currentDate": "2023-01-01T00:59:30.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672535400000,
+        1672539000000,
+        1672542600000,
+        1672546200000,
+        1672549800000,
+        1672553400000,
+        1672557000000,
+        1672560600000
+      ],
+      "prevFires": [
+        1672531800000,
+        1672528200000,
+        1672524600000,
+        1672521000000,
+        1672517400000,
+        1672513800000,
+        1672510200000,
+        1672506600000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 9 * * *",
+      "options": {
+        "currentDate": "2023-01-01T10:00:00.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672650000000,
+        1672736400000,
+        1672822800000,
+        1672909200000,
+        1672995600000,
+        1673082000000,
+        1673168400000,
+        1673254800000
+      ],
+      "prevFires": [
+        1672563600000,
+        1672477200000,
+        1672390800000,
+        1672304400000,
+        1672218000000,
+        1672131600000,
+        1672045200000,
+        1671958800000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 5,10 * * *",
+      "options": {
+        "currentDate": "2023-01-01T06:00:00.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672567200000,
+        1672635600000,
+        1672653600000,
+        1672722000000,
+        1672740000000,
+        1672808400000,
+        1672826400000,
+        1672894800000
+      ],
+      "prevFires": [
+        1672549200000,
+        1672480800000,
+        1672462800000,
+        1672394400000,
+        1672376400000,
+        1672308000000,
+        1672290000000,
+        1672221600000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 9 * * *",
+      "options": {
+        "currentDate": "2023-01-01T09:00:00.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1672650000000,
+        1672736400000,
+        1672822800000,
+        1672909200000,
+        1672995600000,
+        1673082000000,
+        1673168400000,
+        1673254800000
+      ],
+      "prevFires": [
+        1672477200000,
+        1672390800000,
+        1672304400000,
+        1672218000000,
+        1672131600000,
+        1672045200000,
+        1671958800000,
+        1671872400000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * * *",
+      "options": {
+        "currentDate": "2025-01-01T10:00:05.500Z",
+        "startDate": "2025-01-01T10:00:05.200Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1735725606000,
+        1735725607000,
+        1735725608000,
+        1735725609000,
+        1735725610000,
+        1735725611000,
+        1735725612000,
+        1735725613000
+      ],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 0 31 4,6 *",
+      "options": {
+        "currentDate": "2024-01-01T00:00:00Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "*/1 * * * * *",
+      "options": {
+        "currentDate": "2025-01-01T00:00:09.151Z",
+        "endDate": "2025-01-01T00:00:10.000Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1735689610000
+      ],
+      "prevFires": [
+        1735689609000,
+        1735689608000,
+        1735689607000,
+        1735689606000,
+        1735689605000,
+        1735689604000,
+        1735689603000,
+        1735689602000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "*/5 * * * *",
+      "options": {
+        "currentDate": "2025-01-01T12:02:00.000Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1735733100000,
+        1735733400000,
+        1735733700000,
+        1735734000000,
+        1735734300000,
+        1735734600000,
+        1735734900000,
+        1735735200000
+      ],
+      "prevFires": [
+        1735732800000,
+        1735732500000,
+        1735732200000,
+        1735731900000,
+        1735731600000,
+        1735731300000,
+        1735731000000,
+        1735730700000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "1,2,4-10,20-35/5,57 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "*/5 */2 */1 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * 1,3,5",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * 0,2,4",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * 0,2,4,6",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * * * */2",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "5/5 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "* * 1,4-10,L * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 16 * 0-6",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 16 * 0-7",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 16 * */1",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 1-31 * 5",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 16 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 * * 5",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 16 * ?",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 0 * * 1L",
+      "options": {
+        "currentDate": "2023-01-01T00:00:00.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1675036800000,
+        1677456000000,
+        1679875200000,
+        1682294400000,
+        1685318400000,
+        1687737600000,
+        1690761600000,
+        1693180800000
+      ],
+      "prevFires": [
+        1672012800000,
+        1669593600000,
+        1667174400000,
+        1664150400000,
+        1661731200000,
+        1658707200000,
+        1656288000000,
+        1653868800000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 0 * * 1#3",
+      "options": {
+        "currentDate": "2023-01-01T00:00:00.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1673827200000,
+        1676851200000,
+        1679270400000,
+        1681689600000,
+        1684108800000,
+        1687132800000,
+        1689552000000,
+        1692576000000
+      ],
+      "prevFires": [
+        1671408000000,
+        1668988800000,
+        1665964800000,
+        1663545600000,
+        1660521600000,
+        1658102400000,
+        1655683200000,
+        1652659200000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 0 0 8 * 5#3",
+      "options": {
+        "tz": "UTC"
+      },
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 5 * * 7",
+      "options": {
+        "currentDate": "2025-03-29T00:00:00.000Z",
+        "endDate": "2025-03-31T00:00:00.000Z",
+        "tz": "Europe/Rome"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1743303600000
+      ],
+      "prevFires": [
+        1742702400000,
+        1742097600000,
+        1741492800000,
+        1740888000000,
+        1740283200000,
+        1739678400000,
+        1739073600000,
+        1738468800000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 * * * 7",
+      "options": {
+        "currentDate": "2025-03-29T00:00:00.000Z",
+        "endDate": "2025-03-31T00:00:00.000Z",
+        "tz": "Europe/Rome"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1743289200000,
+        1743292800000,
+        1743296400000,
+        1743300000000,
+        1743303600000,
+        1743307200000,
+        1743310800000,
+        1743314400000
+      ],
+      "prevFires": [
+        1742767200000,
+        1742763600000,
+        1742760000000,
+        1742756400000,
+        1742752800000,
+        1742749200000,
+        1742745600000,
+        1742742000000
+      ]
+    },
+    {
+      "source": "CronExpression.test.ts",
+      "expression": "0 5 * * 7",
+      "options": {
+        "currentDate": "2025-03-29T00:00:00.000Z",
+        "endDate": "2025-03-31T00:00:00.000Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1743310800000
+      ],
+      "prevFires": [
+        1742706000000,
+        1742101200000,
+        1741496400000,
+        1740891600000,
+        1740286800000,
+        1739682000000,
+        1739077200000,
+        1738472400000
+      ]
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "61 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got value 61 expected range 0-59",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "-1 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got range NaN-1 expected range 0-59",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "30-20 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid range: 30-20, min(30) > max(20)",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "- * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got range NaN-NaN expected range 0-59",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* 32,72 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got value 72 expected range 0-59",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * 12-36 * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got range 12-36 expected range 0-23",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * * 10-15,40 * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got value 40 expected range 1-31",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * * * */10,12-13 *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got range 12-13 expected range 1-12",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * * * * 9",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, got value 9 expected range 0-7",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * * * * * * *ASD",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid cron expression, too many fields",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 31 4 *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid explicit day of month definition",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 31 2 1-5",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 ! 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: !",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 x 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: x",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 ) 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: )",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 */A 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: */A",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 0-z 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: 0-z",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 0,1,z 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid characters, got value: 0,1,z",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 */0 * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, cannot repeat at every 0 time.",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 */-5 * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Constraint error, cannot repeat at every -5 time.",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 5/5/5 * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid repeat: 5/5/5",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "15 10 * * MON-TUR",
+      "options": {},
+      "anchored": false,
+      "error": "Validation error, cannot resolve alias \"tur\"",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/10 * * * * ,",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid list value format",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/10 * * * * ,2",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid list value format",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "",
+      "options": {
+        "strict": true
+      },
+      "anchored": false,
+      "error": "Invalid cron expression",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "6/23 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10-30 2 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10-30/2 2 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/20 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/25 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*\t*\t*\t*\t*",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* t    *t t  *   *  t t  *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid cron expression, too many fields",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/3 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 12 8 0",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0/30 * * * * ?",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "1/2 * * * * ?",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/10 2-2 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "@yearly",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "15 10 * * SUN",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "15 10 * * MON-TUE",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "15 10 * jAn-FeB mOn-tUE",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/20 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "20-40/10 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 12 */5 6 *",
+      "options": {
+        "currentDate": "2019-06-01T11:00:00.000"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1559390400000,
+        1559822400000,
+        1560254400000,
+        1560686400000,
+        1561118400000,
+        1561550400000,
+        1591012800000,
+        1591444800000
+      ],
+      "prevFires": [
+        1530014400000,
+        1529582400000,
+        1529150400000,
+        1528718400000,
+        1528286400000,
+        1527854400000,
+        1498478400000,
+        1498046400000
+      ]
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 15 */5 5 *",
+      "options": {
+        "currentDate": "2019-05-01T11:00:00.000"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1556722800000,
+        1557154800000,
+        1557586800000,
+        1558018800000,
+        1558450800000,
+        1558882800000,
+        1559314800000,
+        1588345200000
+      ],
+      "prevFires": [
+        1527778800000,
+        1527346800000,
+        1526914800000,
+        1526482800000,
+        1526050800000,
+        1525618800000,
+        1525186800000,
+        1496242800000
+      ]
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 16,31 6 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 16/5 6 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 * 2 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 31 1,6 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 L 2 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * 9-20/3 16-26/5 jun *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 8 * 5#3",
+      "options": {
+        "currentDate": "2024-01-01T00:00:00.000Z",
+        "tz": "UTC"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1704672000000,
+        1705622400000,
+        1707350400000,
+        1708041600000,
+        1709856000000,
+        1710460800000,
+        1712534400000,
+        1713484800000
+      ],
+      "prevFires": [
+        1702598400000,
+        1701993600000,
+        1700179200000,
+        1699401600000,
+        1697760000000,
+        1696723200000,
+        1694736000000,
+        1694131200000
+      ]
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 ? * 3",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 3,6 * ?",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 12 8 7",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 * 6 2",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 2-4,7-31 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 12 8 6,0",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "10 2 12 8 6-7",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * * * 2 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 1 1 1 * 1",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 12,13,10,1-3 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 1,2 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 ? MAY 0#2",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 12 ? MAY 0#2",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 16,18 * 3#3",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 1 2 3 * 1-3,5",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 29 2 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "* * 31 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/5 * * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "59 59 23 * * *",
+      "options": {
+        "currentDate": "2012-12-26T14:38:53.000Z"
+      },
+      "anchored": true,
+      "error": null,
+      "fires": [
+        1356566399000,
+        1356652799000,
+        1356739199000,
+        1356825599000,
+        1356911999000,
+        1356998399000,
+        1357084799000,
+        1357171199000
+      ],
+      "prevFires": [
+        1356479999000,
+        1356393599000,
+        1356307199000,
+        1356220799000,
+        1356134399000,
+        1356047999000,
+        1355961599000,
+        1355875199000
+      ]
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "30 2 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 3 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "*/20 3 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 * 27 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 * 30 * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 12 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 9 1 1 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 12 * * 3",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 4,5 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 2,3 * * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 8 * * 0",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 L * *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 L 10 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 1,3,6-8,L 2 *",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 * * 1L,5L",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 * * 1,5L",
+      "options": {},
+      "anchored": false,
+      "error": null,
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 * * L",
+      "options": {},
+      "anchored": false,
+      "error": "CronDayOfWeek Validation error, unexpected standalone L",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "0 0 0 * * 1,L",
+      "options": {},
+      "anchored": false,
+      "error": "CronDayOfWeek Validation error, unexpected standalone L",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "H/0 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid step: 0, must be positive",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "H(10-5) * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid range: 10-5, min > max",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "H(10-5)/2 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid range: 10-5, min > max",
+      "fires": [],
+      "prevFires": []
+    },
+    {
+      "source": "CronExpressionParser.test.ts",
+      "expression": "H(1-10)/0 * * * *",
+      "options": {},
+      "anchored": false,
+      "error": "Invalid step: 0, must be positive",
+      "fires": [],
+      "prevFires": []
+    }
+  ]
+}

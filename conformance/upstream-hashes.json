@@ -1,0 +1,33 @@
+{
+  "description": "SHA-256 of every upstream test and source file, at the pinned commit. Regenerate with `node run.mjs hashes` after `node run.mjs setup`. Any difference means the upstream tree is not the one this port was validated against.",
+  "upstreamRepo": "https://github.com/harrisiirak/cron-parser",
+  "pinnedCommit": "8410d3717b7adda1e5b9c5fd6c40cb2cbf9d52e4",
+  "trackedFileModifications": 0,
+  "algorithm": "sha256",
+  "files": {
+    "tests/CronDate.test.ts": "88b58f13bdf969849de7e1ce3d1f95434adb32ffec620979e9c9a95789786c60",
+    "tests/CronExpression.test.ts": "ead0c1e06a5c218d60e5e6ffd487282ea33fdf9a28c155d6d1accfc085502b63",
+    "tests/CronExpressionParser.test.ts": "d8e509e1b6ddceff77ef7f2f4f5ccb03f31c0284acdc7f6e2afef2ca06817632",
+    "tests/CronField.test.ts": "5d19db48d01bc905ae583973f32eb9ddf4f5a47107c3c7e408242e6fba1b2a10",
+    "tests/CronFieldCollection.test.ts": "8c510b555f5e602bc6d2af9597f10baa411f36cec7ecc21ecf145b04de27930d",
+    "tests/CronFileParser.test.ts": "077ee02e02cb9510fdbc475a3591165b05b4fc9cc48d95dd14a29594d90c8506",
+    "tests/random.test.ts": "5bc929f12ac84bc2b15c8c7aed2e8a0fd998b03b08160541edbfe79c265d0dc9",
+    "tests/types.d.ts": "6eb38e70ca26309d85102acb92be0a73f5a2c22a18280184082c8e66865a3606",
+    "src/CronDate.ts": "0e377735baadb50ae30fda4208bc1addb12595823fb53ff93c6764e19362a76b",
+    "src/CronExpression.ts": "6b0f7a6bc72c2a79f10c28fcdc5332a01522a26f8a4cec2cb926ec59609a3d0c",
+    "src/CronExpressionParser.ts": "2304c25d5f903a4138848ee9321e4ec6ac15d261de2d3491c7a1cb8e57056e1c",
+    "src/CronFieldCollection.ts": "a3e0c3e895e520365a301eb2fa5269af6d25193ea88665aff3f7e7f559bf46af",
+    "src/CronFileParser.ts": "cb9b2dcf02215e005d4f2c903a30d7e611728a7c759a78b10f113b0f0c573e30",
+    "src/fields/CronDayOfMonth.ts": "441900effdfd3ea1080ddf2778e1b68ac7543d9c94e0a421066baf84cd946f40",
+    "src/fields/CronDayOfWeek.ts": "e5e46bd6bc5bb2542aa57f6f777474b7780e49e330fe74acd25a9c2735c975c2",
+    "src/fields/CronField.ts": "681e6667b93d273112860f5f4fa6f701c9aeb84bf91c6191cca9c7a9cfef6ac0",
+    "src/fields/CronHour.ts": "f07c58e656e0ab5c5e0750854089a6d5d0ef71f91dff6349576b152ad126360e",
+    "src/fields/CronMinute.ts": "c147dc030791201797e2a9034708450b3110b8b0b9e51380e1615a7e8f5dc567",
+    "src/fields/CronMonth.ts": "23c400fb0727f8f85c401f6ddee210ed9774deabee6e093dcb3ebdaa0f4fd656",
+    "src/fields/CronSecond.ts": "5988a25df458f03676a0108c7228e7b7cad7c79c7e2039b5acb4a138e3ea5a1b",
+    "src/fields/index.ts": "20ba8e44d581de5c8070ff25a986c7ce7186641fa1f637a978bd5ba30420213e",
+    "src/fields/types.ts": "4582a4120c66ae7d9fffc7859800ac1aa375998100b6f9ab9f08a2d583f3b785",
+    "src/index.ts": "3f52dbf1f02765c3014d043841eb1e3eb5424ba92a77ec5af220b671224b01fa",
+    "src/utils/random.ts": "ae71d882d21eb8f62042841696a438f5d790d28939a52fdacd3c9f5a1a84fc83"
+  }
+}

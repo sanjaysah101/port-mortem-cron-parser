@@ -1,0 +1,127 @@
+{
+  "schema": "cron-conformance/v1",
+  "description": "Deterministic cron next-fire conformance corpus. Each case is a pure function: (expr, tz, from, n) -> [instant]. Instants are emitted as UTC epoch milliseconds AND as a local-time string with offset, so both the absolute instant and the wall-clock interpretation are diffable.",
+  "tzdata_note": "Results depend on the tz database release. Node 24.7.0 uses ICU 77.1 / tzdata 2025b; Go 1.26.3 embeds tzdata 2025c. Offsets for every transition in this corpus were verified identical across both releases.",
+  "cases": [
+    {
+      "id": "spring-1h-control-daily",
+      "expr": "30 2 * * *",
+      "tz": "America/New_York",
+      "from": "2026-03-06T00:00:00",
+      "n": 5,
+      "why": "Control: a 1-hour spring-forward. 02:30 does not exist on Mar 8. ISC cron would run it at 03:30."
+    },
+    {
+      "id": "spring-2h-troll-daily",
+      "expr": "30 1 * * *",
+      "tz": "Antarctica/Troll",
+      "from": "2026-03-27T00:00:00",
+      "n": 5,
+      "why": "Two-hour spring-forward (UTC+0 -> UTC+2). 01:30 does not exist on Mar 29. cron-parser issue #419."
+    },
+    {
+      "id": "spring-30m-lordhowe-daily",
+      "expr": "0 2 * * *",
+      "tz": "Australia/Lord_Howe",
+      "from": "2026-10-02T00:00:00",
+      "n": 5,
+      "why": "Thirty-minute spring-forward (01:30 -> 02:30). 02:00 does not exist on Oct 4. Sub-hour transition."
+    },
+    {
+      "id": "spring-chatham-daily",
+      "expr": "30 2 * * *",
+      "tz": "Pacific/Chatham",
+      "from": "2026-09-25T00:00:00",
+      "n": 5,
+      "why": "Base offset is +12:45. Transition is a normal 60 min, so this isolates the :45 offset from the width."
+    },
+    {
+      "id": "spring-2h-troll-hourly",
+      "expr": "0 * * * *",
+      "tz": "Antarctica/Troll",
+      "from": "2026-03-28T22:00:00",
+      "n": 8,
+      "why": "Hourly across a two-hour gap: which wall-clock hours fire?"
+    },
+    {
+      "id": "spring-30m-lordhowe-hourly",
+      "expr": "0 * * * *",
+      "tz": "Australia/Lord_Howe",
+      "from": "2026-10-04T00:00:00",
+      "n": 8,
+      "why": "Hourly across a 30-minute gap. After the shift the wall clock sits at :30, so minute-0 fires move."
+    },
+    {
+      "id": "fall-1h-ny-daily",
+      "expr": "30 1 * * *",
+      "tz": "America/New_York",
+      "from": "2026-10-31T00:00:00",
+      "n": 4,
+      "why": "One-hour fall-back. 01:30 occurs TWICE on Nov 1. Does a daily job run once or twice?"
+    },
+    {
+      "id": "fall-1h-ny-hourly",
+      "expr": "0 * * * *",
+      "tz": "America/New_York",
+      "from": "2026-11-01T00:00:00",
+      "n": 6,
+      "why": "Hourly across the repeated hour."
+    },
+    {
+      "id": "fall-30m-lordhowe-daily",
+      "expr": "45 1 * * *",
+      "tz": "Australia/Lord_Howe",
+      "from": "2026-04-04T00:00:00",
+      "n": 4,
+      "why": "Thirty-minute fall-back; 01:45 occurs twice."
+    },
+    {
+      "id": "dom-dow-or-semantics",
+      "expr": "1 2 3 * 5",
+      "tz": "UTC",
+      "from": "2026-01-01T00:00:00",
+      "n": 8,
+      "why": "POSIX: when BOTH day-of-month and day-of-week are restricted, they OR. No DST involved."
+    },
+    {
+      "id": "dom-dow-star-dow",
+      "expr": "1 2 3 * *",
+      "tz": "UTC",
+      "from": "2026-01-01T00:00:00",
+      "n": 4,
+      "why": "Only day-of-month restricted: no OR, fires on the 3rd only."
+    },
+    {
+      "id": "leap-day",
+      "expr": "0 12 29 2 *",
+      "tz": "UTC",
+      "from": "2026-01-01T00:00:00",
+      "n": 3,
+      "why": "Feb 29 only exists in leap years. 2028 is the next."
+    },
+    {
+      "id": "step-across-midnight",
+      "expr": "*/20 23 * * *",
+      "tz": "UTC",
+      "from": "2026-01-01T00:00:00",
+      "n": 5,
+      "why": "Step values in the last hour of the day; checks rollover."
+    },
+    {
+      "id": "dst-step-minutes-spring",
+      "expr": "*/15 * * * *",
+      "tz": "America/New_York",
+      "from": "2026-03-08T01:30:00",
+      "n": 8,
+      "why": "Sub-hour steps crossing the spring-forward instant."
+    },
+    {
+      "id": "dst-step-minutes-fall",
+      "expr": "*/15 * * * *",
+      "tz": "America/New_York",
+      "from": "2026-11-01T00:30:00",
+      "n": 12,
+      "why": "Sub-hour steps crossing the repeated hour. Are the 15-min slots emitted twice?"
+    }
+  ]
+}

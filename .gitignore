@@ -1,0 +1,30 @@
+# The upstream repo is NOT vendored. `node run.mjs setup` clones it at the pinned
+# commit 8410d3717b7adda1e5b9c5fd6c40cb2cbf9d52e4, and
+# conformance/upstream-hashes.json records the SHA-256 of every test and source
+# file so judges can verify the tree is unmodified.
+#
+# Vendoring it would (a) mix 2,823 lines of someone else's MIT-licensed
+# TypeScript into this submission, obscuring what was written in the 72-hour
+# window, and (b) create a nested .git that breaks clones.
+upstream/
+
+# Go
+/port/**/*.exe
+/goprobe/**/*.exe
+
+# Node
+node_modules/
+
+# Generated artifacts — reproducible from committed inputs.
+corpus/generated.json
+corpus/out_*.json
+corpus/gen_*.json
+corpus/err_*.txt
+
+# conformance/trace.json IS committed (37 KB): it is the recorded oracle and the
+# primary evidence for the conformance claim, so a judge should be able to read
+# it without cloning upstream and re-recording.
+
+# OS
+Thumbs.db
+.DS_Store
