@@ -35,14 +35,25 @@ including the biggest one, a wrong default timezone. See
 
 ## Demo
 
-**[▶ 5-minute demo video](demo/port-mortem-cron-parser.mp4)** (2:15, with audio) —
-plays inline on GitHub. Shows, live: the original 302-test suite passing
-unmodified, the SHA-256 manifest, the conformance replay at 130/130, the port's
-own tests, and 60 seconds of differential fuzzing.
+### ▶ [Watch the demo video](https://youtu.be/4O2HAY4QAoM) · 2:15, with audio
 
-Reproduce the same run yourself with `node demo/demo.mjs` — the demo driver runs
-only commands documented in this README, so nothing in the video is
-demo-only.
+Shows, live and in order: the original 302-test suite passing **unmodified**, the
+SHA-256 manifest proving the tree is the one the port was validated against, the
+conformance replay at **130/130**, the port's own tests, and **60 seconds of
+differential fuzzing** with zero unexplained divergence.
+
+Also committed here: [`demo/port-mortem-cron-parser.mp4`](demo/port-mortem-cron-parser.mp4)
+(24.8 MB, H.264 + AAC) — download to view, since GitHub does not play MP4s
+referenced by repo path.
+
+**Reproduce the same run yourself:**
+
+```bash
+node demo/demo.mjs
+```
+
+Every command in the demo is one documented in this README. Nothing is
+demo-only, so what the video shows is what you get.
 
 ## Why this repo
 
