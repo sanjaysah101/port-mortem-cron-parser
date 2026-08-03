@@ -1,0 +1,15 @@
+
+  PORT MORTEM 2026  ·  Track C  ·  TypeScript → Go
+
+  harrisiirak/cron-parser  →  cronparser-go
+
+    2,823 LOC TypeScript  →  2,234 LOC Go
+    zero dependencies          (upstream needs luxon)
+    upstream pinned at         8410d3717b7adda1e5b9c5fd6c40cb2cbf9d52e4
+
+
+  Generating a port is easy.
+  Proving it behaves the same is the open problem.
+
+  So that is what most of this is about.
+

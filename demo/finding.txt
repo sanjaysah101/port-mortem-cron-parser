@@ -1,0 +1,29 @@
+
+  THE FINDING WORTH REPORTING UPSTREAM
+
+  The fuzzer kept producing divergences of exactly one DST shift on
+  ambiguous times — the repeated hour during fall-back.
+
+  I tried five rules for which of the two valid instants luxon picks:
+  earliest, latest, larger offset, pre-transition, post-transition.
+  Every one failed on some zone.
+
+  There is no rule. From luxon/src/datetime.js:
+
+    // find the right offset a given local time. The o input is our
+    // guess, which determines which offset we'll pick in ambiguous
+    // cases (e.g. there are two 3 AMs b/c Fallback DST)
+    function fixOffset(localTS, o, tz) { ... }
+
+  ...and for IANA zones that guess is guessOffsetForZone(zone)
+  = the zone's offset at Settings.now() — THE CURRENT MOMENT.
+
+  So parse(expr, { currentDate: <ambiguous wall clock> }) can return
+  an instant an hour apart depending on the season the process runs in.
+
+  No amount of black-box differential testing would find this: the
+  behaviour is not a function of the inputs. I had to read the
+  dependency's source.
+
+  That is a real ceiling on what differential fuzzing can prove.
+

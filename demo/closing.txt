@@ -1,0 +1,26 @@
+
+  EQUIVALENCE EVIDENCE
+
+    original suite as oracle      130 / 130
+    pinned corpus                  15 / 15
+    generated, 10 seeds x 640   6,400 / 6,400
+    continuous fuzz, 180.8s     36,040 cases, 0 divergences
+
+
+  ALSO HONEST ABOUT
+
+    · One residual divergence, ~1 per 30,000: prev() from an ambiguous
+      instant in a sub-hour-transition zone. Cause identified; the
+      faithful fix made iteration stall instead. FINDINGS.md §4g.
+
+    · One upstream bug the port deliberately does NOT reproduce:
+      prev() throws "loop limit exceeded" on a plain daily-midnight
+      schedule in Pacific/Chatham. Registered with a narrow predicate
+      so it can never mask a real port bug.
+
+    · Two retractions kept in the write-up rather than deleted —
+      being corrected by running the code is the entire point.
+
+
+  github.com/sanjaysah101/port-mortem-cron-parser
+
